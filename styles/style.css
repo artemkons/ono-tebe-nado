@@ -1,1 +1,62 @@
-/* место для вашего кода */
+.header {
+    width: 1340px;
+    margin: 92px auto 0 auto;
+    display: grid;
+    overflow: hidden;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "menu logo contacts";
+    align-items: center;
+    font-size: 18px;
+}
+
+.header__menu {
+    grid-area: menu;
+}
+
+.header__links-list {
+    display: flex;
+    gap: 32px;
+    list-style: circle;
+}
+
+.header__links-list .header__links-list-item {
+    text-decoration: none;
+    border-bottom: 1px solid #000;
+}
+
+.header__logo {
+    grid-area: logo;
+    justify-self: center;
+    display: block;
+    width: 140px;
+    height: 108px;
+}
+
+.header__contacts {
+    grid-area: contacts;
+    justify-self: end;
+    width: 240px;
+    display: flex;
+    flex-direction: column;
+    line-height: 24px;
+}
+
+.header__contacts address {
+    font-style: normal;
+}
+
+.cover {
+
+}
+
+.lots {
+
+}
+
+.about {
+
+}
+
+.footer {
+
+}
