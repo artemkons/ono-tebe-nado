@@ -14,17 +14,14 @@
     font-size: 18px;
 }
 
-.header__menu {
+.header .header__links-list {
     grid-area: menu;
-}
-
-.header__links-list {
     display: flex;
     gap: 32px;
     list-style: circle;
 }
 
-.header__links-list .header__links-list-item {
+.header .header__links-list .header__links-list-item {
     border-bottom: 1px solid #000;
     text-decoration: none;
 }
@@ -33,7 +30,7 @@
     border: none;
 }
 
-.header__logo {
+.header .header__logo {
     display: block;
     grid-area: logo;
     justify-self: center;
@@ -41,7 +38,7 @@
     height: 108px;
 }
 
-.header__contacts {
+.header .header__contacts {
     display: flex;
     flex-direction: column;
     grid-area: contacts;
@@ -49,7 +46,7 @@
     width: 240px;
     font-size: 18px;
     font-style: normal;
-    line-height: 24px;
+    line-height: 1.35;
     text-decoration: none;
 }
 
@@ -57,18 +54,6 @@
     position: relative;
     padding: 165px 50px 50px;
     background-image: url('../images/cover.jpg');
-}
-
-.background-cover-no-repeat {
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.overlay {
-    position: absolute;
-    inset: 0;
-    opacity: 0.6;
-    background: #000;
 }
 
 .cover .cover__title {
@@ -273,3 +258,16 @@
     width: 48px;
     height: 48px;
 }
+
+.background-cover-no-repeat {
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    opacity: 0.6;
+    background: #000;
+}
+
