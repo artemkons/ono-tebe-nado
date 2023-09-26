@@ -1,5 +1,5 @@
-.main {
-    width: 1440px;
+.header, .main, .footer {
+    max-width: 1440px;
     margin: 0 auto;
 }
 
@@ -8,9 +8,8 @@
     grid-template-columns: repeat(3, 1fr);
     grid-template-areas: "menu logo contacts";
     align-items: center;
-    width: 1340px;
+    max-width: 1340px;
     margin: 92px auto;
-    overflow: hidden;
     font-size: 18px;
 }
 
@@ -18,15 +17,19 @@
     grid-area: menu;
     display: flex;
     gap: 32px;
+    list-style: none;
+}
+
+.header .header__links-list .header__links-list-item:not(:first-child) {
     list-style: circle;
 }
 
-.header .header__links-list .header__links-list-item {
+.header .header__link {
     border-bottom: 1px solid #000;
     text-decoration: none;
 }
 
-.header .header__links-list .header__link_active {
+.header .header__link_active {
     border: none;
 }
 
@@ -39,13 +42,15 @@
 }
 
 .header .header__contacts {
+    grid-area: contacts;
+}
+
+.address {
     display: flex;
     flex-direction: column;
-    grid-area: contacts;
     justify-self: end;
     width: 240px;
     font-size: 18px;
-    font-style: normal;
     line-height: 1.35;
     text-decoration: none;
 }
@@ -63,7 +68,7 @@
     font-weight: 700;
     font-size: 100px;
     line-height: 1.15;
-    letter-spacing: 30px;
+    letter-spacing: .3em;
     text-transform: uppercase;
 }
 
@@ -82,11 +87,11 @@
     color: #FFF;
     font-size: 22px;
     text-transform: uppercase;
-    word-spacing: 16px;
+    word-spacing: 18px;
 }
 
 .cover .cover__description .bet-button {
-    border: 1px solid #FFF;
+    border: 1px solid currentColor;
     padding: 12px 32px;
     color: #FFF;
     font-family: 'Raleway', sans-serif;
@@ -97,8 +102,11 @@
 
 .aligned-text {
     display: block;
-    margin-bottom: 20px;
     line-height: 1;
+}
+
+.aligned-text:not(:last-child) {
+    margin-bottom: 20px;
 }
 
 .aligned-text_center {
@@ -114,15 +122,19 @@
 }
 
 .letter-spacing-extended {
-    letter-spacing: 60px;
+    letter-spacing: .6em;
 }
 
 .no-letter-spacing {
     letter-spacing: 0;
 }
 
-.lots, .about, .footer {
+.lots, .about {
     margin: 180px 50px;
+}
+
+.footer {
+    margin-top: 180px;
 }
 
 .section-title {
@@ -188,10 +200,9 @@
 }
 
 .lots .lots__look-more-link {
-    display: inline-block;
+    display: block;
+    text-decoration: underline;
     margin: 30px 0 0 40px;
-    border-bottom: 1px solid #000;
-    padding-bottom: 1px;
     font-size: 20px;
 }
 
@@ -217,7 +228,8 @@
     height: 114px;
 }
 
-.about .about-title {
+.about .about__title {
+    margin-top: 10px;
     align-self: center;
 }
 
@@ -226,7 +238,7 @@
     font-size: 20px;
 }
 
-.about .about__text-margin {
+.about .about__text p:not(:last-child) {
     margin-bottom: 25px;
 }
 
@@ -234,6 +246,7 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 90px;
+    padding: 0 50px;
 }
 
 .footer .footer__menu {
@@ -244,13 +257,14 @@
     list-style: none;
 }
 
-.footer .footer__menu .footer__menu-link-active {
+.footer .footer__menu .footer__menu-link.footer__menu-link_active {
     text-decoration: none;
 }
 
 .footer .footer__social-list {
     display: flex;
     gap: 48px;
+    list-style-type: none;
 }
 
 .footer .footer__social-list .footer__social-link {
