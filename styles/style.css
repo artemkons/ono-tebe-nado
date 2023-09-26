@@ -133,10 +133,6 @@
     margin: 180px 50px;
 }
 
-.footer {
-    margin-top: 180px;
-}
-
 .section-title {
     color: #000;
     font-weight: 700;
@@ -245,7 +241,7 @@
 .footer {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 90px;
+    margin: 180px auto 90px;
     padding: 0 50px;
 }
 
